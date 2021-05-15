@@ -26,10 +26,11 @@ export default {
       isShow: false
     }
   },
-  props: ['index', 'item', 'delObj'],
+  props: ['index', 'item'],
   methods: {
     del () {
-      this.delObj(this.index)
+      // 通过总线（vm）拿到绑定好的事件（delObj）执行事件的回调传入数据
+      this.$bus.$emit('delObj', this.index)
     }
   }
 }

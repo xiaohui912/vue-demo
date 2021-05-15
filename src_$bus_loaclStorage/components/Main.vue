@@ -1,7 +1,7 @@
 <template>
   <main>
     <ul>
-      <MainCheck v-for="(item,index) in arr" :key="item.id" :index="index" :item="item" :delObj="delObj"></MainCheck>
+      <MainCheck v-for="(item,index) in arr" :key="item.id" :index="index" :item="item"></MainCheck>
     </ul>
   </main>
 </template>
@@ -13,7 +13,7 @@ export default {
   data () {
     return {}
   },
-  props: ['arr', 'delObj'],
+  props: ['arr'],
   components: {
     MainCheck
   }
